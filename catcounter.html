@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/catclick.css">
+    <title>JS Cat Clicker</title>
+    
+</head>
+<body>
+	<h2 id="title">cat-count</h2>
+	<div link>
+		<span><a href="javascript:;" 
+		onClick="document.getElementById('catOne').style.display='block';">Cat1</a></span>
+		<span><a href="javascript:;" 
+		onClick="document.getElementById('catTwo').style.display='block';">Cat2</a></span>
+		<span><a href="javascript:;" 
+		onClick="document.getElementById('catThree').style.display='block';">Cat3</a></span>
+		<span><a href="javascript:;" 
+		onClick="document.getElementById('catFour').style.display='block';">Cat4</a></span>
+		<span><a href="javascript:;" 
+		onClick="document.getElementById('catFive').style.display='block';">Cat5</a></span>
+	</div>
+
+
+      <div id="cat">
+      	<div id="catOne" style="display:none;">
+	        <figure>
+		        <img id="catImgOne" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr07/4/16/enhanced-16354-1396642706-25.jpg?no-auto" alt="This is a cat picture">
+		        <figcaption><h3>Name=Cat1</h3></figcaption>
+		        <p style = "text-align: left;" id ="p2">Clicks= 0</p>
+		    </figure>
+		</div>
+		<div id="catTwo" style="display:none;">
+	        <figure>
+		        <img id="catImgTwo" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr04/10/12/enhanced-buzz-29081-1397145781-14.jpg?downsize=715:*&output-format=auto&output-quality=auto">
+		        <figcaption><h3>Name=Cat2</h3></figcaption>
+		        <p style = "text-align: left;" id ="p3">Clicks= 0</p>
+		    </figure>
+		</div>
+		<div id="catThree" style="display:none;">
+		    <figure>
+		        <img id="catImgThree" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr02/9/12/enhanced-buzz-11844-1397060009-22.jpg?downsize=715:*&output-format=auto&output-quality=auto">
+		        <figcaption><h3>Name=Cat3</h3></figcaption>
+		        <p style = "text-align: left;" id ="p4">Clicks= 0</p>
+		    </figure>
+		</div>
+		<div id="catFour" style="display:none;">
+		    <figure>
+		        <img id="catImgFour" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr07/9/14/enhanced-18798-1397069417-26.jpg?downsize=715:*&output-format=auto&output-quality=auto">
+		        <figcaption><h3>Name=Cat4</h3></figcaption>
+		        <p style = "text-align: left;" id ="p5">Clicks= 0</p>
+		    </figure>
+		</div>
+		<div id="catFive" style="display:none;">
+		    <figure>
+		        <img id="catImgFive" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr03/9/14/enhanced-20729-1397069470-8.jpg?downsize=715:*&output-format=auto&output-quality=auto">
+		        <figcaption><h3>Name=Cat5</h3></figcaption>
+		        <p style = "text-align: left;" id ="p6">Clicks= 0</p>
+		    </figure>
+		</div>
+
+       </div>
+
+        <script type="text/javascript">
+        	function ChangeImageSrc(oldSrc, newSrc) {
+        		var imgElements = document.getElementsByTagName('img');
+        		for (i = 0; i < imgElements.length; i++){
+            		if (imgElements[i].src == oldSrc){
+                		imgElements[i].src = newSrc;
+                		console.log(imgElements);
+                		break;
+            }
+        }
+    }
+        	var counter=0;
+        	var elem = document.getElementById('catImgOne');
+			elem.addEventListener('click', function(){
+					counter=counter+1;
+					document.getElementById("p2").innerHTML='Clicks= '+counter;
+					console.log(counter);
+  //the element has been clicked... do stuff here
+			}, false);
+			var counter2=0;
+        	var elem = document.getElementById('catImgTwo');
+			elem.addEventListener('click', function(){
+					counter2=counter2+1;
+					document.getElementById("p3").innerHTML='Clicks= '+counter2;
+  //the element has been clicked... do stuff here
+			}, false);
+			var counter3=0;
+        	var elem = document.getElementById('catImgThree');
+			elem.addEventListener('click', function(){
+					counter3=counter3+1;
+					document.getElementById("p4").innerHTML='Clicks= '+counter3;
+  //the element has been clicked... do stuff here
+			}, false);
+			var counter4=0;
+        	var elem = document.getElementById('catImgFour');
+			elem.addEventListener('click', function(){
+					counter4=counter4+1;
+					document.getElementById("p5").innerHTML='Clicks= '+counter4;
+  //the element has been clicked... do stuff here
+			}, false);
+			var counter5=0;
+        	var elem = document.getElementById('catImgFive');
+			elem.addEventListener('click', function(){
+					counter5=counter5+1;
+					document.getElementById("p6").innerHTML='Clicks= '+counter5;
+  //the element has been clicked... do stuff here
+			}, false);
+
+        	</script>
+
+        <!--<script src="javascript/clicker.js"></script>-->
+</body>
+</html>

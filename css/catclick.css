@@ -1,0 +1,15 @@
+
+
+img {
+    height: 500px;
+    width: 350px;
+    border-image: 3px;
+    display: block;
+    top: 80; 
+    left: 80; 
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
